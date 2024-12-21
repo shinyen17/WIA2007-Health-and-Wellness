@@ -16,7 +16,7 @@ public class ConnectionClass {
 
     protected static String username = "root";
 
-    protected static String password = "password";
+    protected static String password = "host@123";
 
     public Connection CONN(){
         Connection conn = null;
