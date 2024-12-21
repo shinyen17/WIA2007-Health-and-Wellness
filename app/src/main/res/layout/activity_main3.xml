@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/back"
+    android:gravity="center"> <!-- Center content horizontally -->
+
+    <!-- Toolbar -->
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:gravity="center"
+        android:text="FAQs"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
+    <!-- Bottom Message -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:text="We’re here to help you with anything"
+        android:textSize="25sp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:text="Find answers to common questions here. Let's make each day a little brighter together!"
+        />
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_search_background"
+        android:ems="10"
+        android:hint="Search using keywords"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="16dp"
+        android:paddingRight="16dp"
+        android:textAlignment="viewStart" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/faq_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Centered No Result Text -->
+        <TextView
+            android:id="@+id/noresult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Result Found"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:textColor="@color/blue"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/bottom_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Can't find the answer you're looking for? Book an appointment with our team."
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="#666666" />
+</LinearLayout>
