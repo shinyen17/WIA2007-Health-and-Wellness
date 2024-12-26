@@ -15,12 +15,12 @@ import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DietFragment#newInstance} factory method to
+ * Use the {@link MentalFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DietFragment extends Fragment {
+public class MentalFragment extends Fragment {
 
-    private TextView appointmentButton3, appointmentButton4;
+    private TextView appointmentButton1, appointmentButton2;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,7 +31,7 @@ public class DietFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public DietFragment() {
+    public MentalFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +41,11 @@ public class DietFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DietFragment.
+     * @return A new instance of fragment MentalFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DietFragment newInstance(String param1, String param2) {
-        DietFragment fragment = new DietFragment();
+    public static MentalFragment newInstance(String param1, String param2) {
+        MentalFragment fragment = new MentalFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,25 +66,25 @@ public class DietFragment extends Fragment {
 //    public View onCreateView(LayoutInflater inflater, ViewGroup container,
 //                             Bundle savedInstanceState) {
 //        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_diet, container, false);
+//        return inflater.inflate(R.layout.fragment_mental, container, false);
 //    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_diet, container, false);
+        View view = inflater.inflate(R.layout.fragment_mental, container, false);
 
-        appointmentButton3 = view.findViewById(R.id.appoinment3);
-        appointmentButton4 = view.findViewById(R.id.appoinment4);
+        appointmentButton1 = view.findViewById(R.id.appoinment1);
+        appointmentButton2 = view.findViewById(R.id.appoinment2);
 
         // Set click listeners to navigate to ChooseSlotFragment
-        appointmentButton3.setOnClickListener(v -> {
+        appointmentButton1.setOnClickListener(v -> {
             // Start ChooseSlotFragment and pass the doctor details
             ChooseSlotFragment chooseSlotFragment = new ChooseSlotFragment();
             Bundle args = new Bundle();
-            args.putString("doctor_name", "Dr. Adam");
-            args.putString("specialization", "Dietition");
-            args.putInt("doctor_image", R.drawable.dr3); // Pass the image resource ID
+            args.putString("doctor_name", "Dr. Sarah");
+            args.putString("specialization", "Clinical Psychologist");
+            args.putInt("doctor_image", R.drawable.dr1); // Pass the image resource ID
             chooseSlotFragment.setArguments(args);
 
             // Begin fragment transaction
@@ -94,19 +94,18 @@ public class DietFragment extends Fragment {
             transaction.commit();
         });
 
-        // Set click listeners to navigate to ChooseSlotFragment
-        appointmentButton4.setOnClickListener(v -> {
+        appointmentButton2.setOnClickListener(v -> {
             // Start ChooseSlotFragment and pass the doctor details
             ChooseSlotFragment chooseSlotFragment = new ChooseSlotFragment();
             Bundle args = new Bundle();
-            args.putString("doctor_name", "Dr. Susan");
-            args.putString("specialization", "Nutritionist");
-            args.putInt("doctor_image", R.drawable.dr4); // Pass the image resource ID
+            args.putString("doctor_name", "Dr. Laura");
+            args.putString("specialization", "Clinical Therapist");
+            args.putInt("doctor_image", R.drawable.dr2); // Pass the image resource ID
             chooseSlotFragment.setArguments(args);
 
             // Begin fragment transaction
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.framelayout, chooseSlotFragment); // R.id.fragment_container should be your container ID
+            transaction.replace(R.id.framelayout , chooseSlotFragment); // R.id.fragment_container should be your container ID
             transaction.addToBackStack(null); // Optional: Add this transaction to the back stack to navigate back
             transaction.commit();
         });

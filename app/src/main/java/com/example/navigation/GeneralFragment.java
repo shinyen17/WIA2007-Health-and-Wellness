@@ -15,12 +15,12 @@ import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DietFragment#newInstance} factory method to
+ * Use the {@link GeneralFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DietFragment extends Fragment {
+public class GeneralFragment extends Fragment {
 
-    private TextView appointmentButton3, appointmentButton4;
+    private TextView appointmentButton5, appointmentButton6;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,7 +31,7 @@ public class DietFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public DietFragment() {
+    public GeneralFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +41,11 @@ public class DietFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DietFragment.
+     * @return A new instance of fragment GeneralFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DietFragment newInstance(String param1, String param2) {
-        DietFragment fragment = new DietFragment();
+    public static GeneralFragment newInstance(String param1, String param2) {
+        GeneralFragment fragment = new GeneralFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,25 +66,25 @@ public class DietFragment extends Fragment {
 //    public View onCreateView(LayoutInflater inflater, ViewGroup container,
 //                             Bundle savedInstanceState) {
 //        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_diet, container, false);
+//        return inflater.inflate(R.layout.fragment_general, container, false);
 //    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_diet, container, false);
+        View view = inflater.inflate(R.layout.fragment_general, container, false);
 
-        appointmentButton3 = view.findViewById(R.id.appoinment3);
-        appointmentButton4 = view.findViewById(R.id.appoinment4);
+        appointmentButton5 = view.findViewById(R.id.appoinment5);
+        appointmentButton6 = view.findViewById(R.id.appoinment6);
 
         // Set click listeners to navigate to ChooseSlotFragment
-        appointmentButton3.setOnClickListener(v -> {
+        appointmentButton5.setOnClickListener(v -> {
             // Start ChooseSlotFragment and pass the doctor details
             ChooseSlotFragment chooseSlotFragment = new ChooseSlotFragment();
             Bundle args = new Bundle();
-            args.putString("doctor_name", "Dr. Adam");
-            args.putString("specialization", "Dietition");
-            args.putInt("doctor_image", R.drawable.dr3); // Pass the image resource ID
+            args.putString("doctor_name", "Dr. John");
+            args.putString("specialization", "General Practitioner (GP)");
+            args.putInt("doctor_image", R.drawable.dr5); // Pass the image resource ID
             chooseSlotFragment.setArguments(args);
 
             // Begin fragment transaction
@@ -95,13 +95,13 @@ public class DietFragment extends Fragment {
         });
 
         // Set click listeners to navigate to ChooseSlotFragment
-        appointmentButton4.setOnClickListener(v -> {
+        appointmentButton6.setOnClickListener(v -> {
             // Start ChooseSlotFragment and pass the doctor details
             ChooseSlotFragment chooseSlotFragment = new ChooseSlotFragment();
             Bundle args = new Bundle();
-            args.putString("doctor_name", "Dr. Susan");
-            args.putString("specialization", "Nutritionist");
-            args.putInt("doctor_image", R.drawable.dr4); // Pass the image resource ID
+            args.putString("doctor_name", "Dr. Rebeca");
+            args.putString("specialization", "Family Doctor");
+            args.putInt("doctor_image", R.drawable.dr6); // Pass the image resource ID
             chooseSlotFragment.setArguments(args);
 
             // Begin fragment transaction
