@@ -1,18 +1,11 @@
 package com.example.navigation;
 
-import android.app.Dialog;
-
+import androidx.core.view.GravityCompat;
 import androidx. fragment. app. Fragment;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
+import android.util.Log;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx. appcompat. widget. Toolbar;
@@ -28,7 +21,6 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    FloatingActionButton fab;
     DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
 
@@ -38,50 +30,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-//        fab = findViewById(R.id.fab);
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         Toolbar toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
+        // Setting up the ActionBarDrawerToggle
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        // Setting default fragment on first launch
         if(savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new HomeFragment()).commit();
+            replaceFragment(new HomeFragment());
             navigationView.setCheckedItem(R.id.nav_home);
+            bottomNavigationView.setSelectedItemId(R.id.Home); // Ensure bottom nav is synced
         }
 
-        replaceFragment(new HomeFragment());
+//        replaceFragment(new HomeFragment());
 
         bottomNavigationView.setBackground(null);
-//        bottomNavigationView.setOnItemSelectedListener(item -> {
-//
-//            switch (item.getItemId()) {
-//                case R.id.Home:
-//                    replaceFragment(new HomeFragment());
-//                    break;
-//                case R.id.Shorts:
-//                    replaceFragment(new ShootsFragment());
-//                    break;
-//                case R.id.Subscriptions:
-//                    replaceFragment(new SubscriptionsFragment());
-//                    break;
-//                case R.id.Library:
-//                    replaceFragment(new LibraryFragment());
-//                    break;
-//            }
-//
-//            return true;
-//        });
-
         bottomNavigationView.setOnItemSelectedListener(item -> {
-            // Use R.id.Home, R.id.Shorts, etc., which are the actual IDs defined in the XML
             if (item.getItemId() == R.id.Home) {
                 replaceFragment(new HomeFragment());
             } else if (item.getItemId() == R.id.Diet) {
-                replaceFragment(new DietFragment());
+                replaceFragment(new FoodFragment());
             } else if (item.getItemId() == R.id.PhysicalHealth) {
                 replaceFragment(new PhysicalHealthFragment());
             } else if (item.getItemId() == R.id.MentalHealth) {
@@ -92,13 +65,26 @@ public class MainActivity extends AppCompatActivity {
             return true;  // Return true to indicate the item was selected
         });
 
+        // Setting NavigationView item selection listener
+        navigationView.setNavigationItemSelectedListener(item -> {
+            Log.d("MainActivity", "Menu item clicked: " + item.getItemId());
 
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                showBottomDialog();
-//            }
-//        });
+            if (item.getItemId() == R.id.nav_home) {
+                Log.d("MainActivity", "Navigating to Home fragment.");
+                // Don't need to start MainActivity since it's already the current activity
+                drawerLayout.closeDrawer(GravityCompat.START); // Close the drawer
+            }else if (item.getItemId() == R.id.nav_mentaltest) {
+                Log.d("MainActivity", "Starting MentalHealthTest activity.");
+                startActivity(new Intent(MainActivity.this, MentalHealthTest.class));
+            }else if (item.getItemId() == R.id.nav_faq) {
+                Log.d("MainActivity", "Starting FAQs activity.");
+                startActivity(new Intent(MainActivity.this, FAQs.class));
+            }
+            // Close the drawer after selection
+            drawerLayout.closeDrawer(GravityCompat.START);
+            return true;
+        });
+
     }
 
     private  void replaceFragment(Fragment fragment) {
@@ -107,60 +93,4 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame_layout, fragment);
         fragmentTransaction.commit();
     }
-
-//    private void showBottomDialog() {
-//
-//        final Dialog dialog = new Dialog(this);
-//        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        dialog.setContentView(R.layout.bottomsheetlayout);
-//
-//        LinearLayout videoLayout = dialog.findViewById(R.id.layoutVideo);
-//        LinearLayout shortsLayout = dialog.findViewById(R.id.layoutShorts);
-//        LinearLayout liveLayout = dialog.findViewById(R.id.layoutLive);
-//        ImageView cancelButton = dialog.findViewById(R.id.cancelButton);
-//
-//        videoLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                dialog.dismiss();
-//                Toast.makeText(MainActivity.this,"Upload a Video is clicked",Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
-//
-//        shortsLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                dialog.dismiss();
-//                Toast.makeText(MainActivity.this,"Create a short is Clicked",Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
-//
-//        liveLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                dialog.dismiss();
-//                Toast.makeText(MainActivity.this,"Go live is Clicked",Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
-//
-//        cancelButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                dialog.dismiss();
-//            }
-//        });
-//
-//        dialog.show();
-//        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-//        dialog.getWindow().setGravity(Gravity.BOTTOM);
-//
-//    }
 }

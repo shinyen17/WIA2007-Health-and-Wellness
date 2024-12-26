@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DietFragment"
+    tools:context=".GeneralFragment"
     android:background="@color/back">
 
     <LinearLayout
@@ -23,40 +23,41 @@
 
 
             <ImageView
-                android:id="@+id/imageViewDoctor3"
+                android:id="@+id/imageViewDoctor5"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/dr3"
+
+                android:src="@drawable/dr5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textViewName3"
+                android:id="@+id/textViewName5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Dr. Adam"
+                android:text="Dr. John"
                 android:textColor="@color/blue"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor3"
-                app:layout_constraintTop_toTopOf="@+id/imageViewDoctor3" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor5"
+                app:layout_constraintTop_toTopOf="@+id/imageViewDoctor5" />
 
 
             <TextView
-                android:id="@+id/specialist3"
+                android:id="@+id/specialist5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Dietition"
+                android:text="General Practitioner (GP)"
                 android:textColor="#26273a"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor3"
-                app:layout_constraintTop_toBottomOf="@+id/textViewName3" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor5"
+                app:layout_constraintTop_toBottomOf="@+id/textViewName5" />
 
             <TextView
-                android:id="@+id/appoinment3"
+                android:id="@+id/appoinment5"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:layout_marginEnd="20dp"
@@ -84,7 +85,7 @@
 
 
             <ImageView
-                android:id="@+id/imageViewDoctor4"
+                android:id="@+id/imageViewDoctor6"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="16dp"
@@ -93,34 +94,34 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/dr4"  />
+                app:srcCompat="@drawable/dr6"  />
 
             <TextView
-                android:id="@+id/textViewName4"
+                android:id="@+id/textViewName6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Dr. Susan"
+                android:text="Dr. Rebeca"
                 android:textColor="@color/blue"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor4"
-                app:layout_constraintTop_toTopOf="@+id/imageViewDoctor4" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor6"
+                app:layout_constraintTop_toTopOf="@+id/imageViewDoctor6" />
 
 
             <TextView
-                android:id="@+id/specialist4"
+                android:id="@+id/specialist6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Nutritionist"
+                android:text="Family Doctor"
                 android:textColor="#26273a"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor4"
-                app:layout_constraintTop_toBottomOf="@+id/textViewName4" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor6"
+                app:layout_constraintTop_toBottomOf="@+id/textViewName6" />
 
             <TextView
-                android:id="@+id/appoinment4"
+                android:id="@+id/appoinment6"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:layout_marginEnd="20dp"

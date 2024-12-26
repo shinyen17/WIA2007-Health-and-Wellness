@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DietFragment"
+    tools:context=".MentalFragment"
     android:background="@color/back">
 
     <LinearLayout
@@ -21,42 +21,42 @@
             android:layout_marginEnd="32dp"
             android:background="@drawable/cat">
 
-
             <ImageView
-                android:id="@+id/imageViewDoctor3"
+                android:id="@+id/imageViewDoctor1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/dr3"
+
+                android:src="@drawable/dr1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textViewName3"
+                android:id="@+id/textViewName1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Dr. Adam"
+                android:text="Dr. Sarah"
                 android:textColor="@color/blue"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor3"
-                app:layout_constraintTop_toTopOf="@+id/imageViewDoctor3" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor1"
+                app:layout_constraintTop_toTopOf="@+id/imageViewDoctor1" />
 
 
             <TextView
-                android:id="@+id/specialist3"
+                android:id="@+id/specialist1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Dietition"
+                android:text="Chinical Psychologist"
                 android:textColor="#26273a"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor3"
-                app:layout_constraintTop_toBottomOf="@+id/textViewName3" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor1"
+                app:layout_constraintTop_toBottomOf="@+id/textViewName1" />
 
             <TextView
-                android:id="@+id/appoinment3"
+                android:id="@+id/appoinment1"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:layout_marginEnd="20dp"
@@ -71,7 +71,6 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -82,9 +81,8 @@
             android:background="@drawable/cat"
             android:layout_marginTop="20dp">
 
-
             <ImageView
-                android:id="@+id/imageViewDoctor4"
+                android:id="@+id/imageViewDoctor2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="16dp"
@@ -93,34 +91,34 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/dr4"  />
+                app:srcCompat="@drawable/dr2" />
 
             <TextView
-                android:id="@+id/textViewName4"
+                android:id="@+id/textViewName2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Dr. Susan"
+                android:text="Dr. Laura"
                 android:textColor="@color/blue"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor4"
-                app:layout_constraintTop_toTopOf="@+id/imageViewDoctor4" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor2"
+                app:layout_constraintTop_toTopOf="@+id/imageViewDoctor2" />
 
 
             <TextView
-                android:id="@+id/specialist4"
+                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Nutritionist"
+                android:text="Clinical Therapist"
                 android:textColor="#26273a"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor4"
-                app:layout_constraintTop_toBottomOf="@+id/textViewName4" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewDoctor2"
+                app:layout_constraintTop_toBottomOf="@+id/textViewName2" />
 
             <TextView
-                android:id="@+id/appoinment4"
+                android:id="@+id/appoinment2"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:layout_marginEnd="20dp"
@@ -135,8 +133,8 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </LinearLayout>
 
