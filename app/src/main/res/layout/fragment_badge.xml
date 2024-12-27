@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/BadgeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".Badge">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="363dp"
+            android:layout_height="524dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="19dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CVCal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ConstraintCal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/IVCalOnMe"
+                        android:layout_width="40dp"
+                        android:layout_height="52dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/IVCal"
+                        app:layout_constraintHorizontal_bias="0.086"
+                        app:layout_constraintStart_toStartOf="@+id/IVCal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/badge2" />
+
+                    <TextView
+                        android:id="@+id/CaloriesBadge"
+                        android:layout_width="174dp"
+                        android:layout_height="26dp"
+                        android:text="Cal On Me"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/IVCal"
+                        android:layout_width="362dp"
+                        android:layout_height="96dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="1dp"
+                        android:alpha="0.75"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@android:drawable/screen_background_light" />
+
+                    <ImageView
+                        android:id="@+id/CalLock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/IVCal"
+                        app:layout_constraintEnd_toEndOf="@+id/IVCal"
+                        app:layout_constraintStart_toStartOf="@+id/IVCal"
+                        app:layout_constraintTop_toTopOf="@+id/IVCal"
+                        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CVExercise"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ConstraintExercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/IVSavvy"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/IVExercise"
+                        app:layout_constraintHorizontal_bias="0.071"
+                        app:layout_constraintStart_toStartOf="@+id/IVExercise"
+                        app:layout_constraintTop_toTopOf="@+id/IVExercise"
+                        app:layout_constraintVertical_bias="0.49"
+                        app:srcCompat="@drawable/badge1" />
+
+                    <TextView
+                        android:id="@+id/ExerciseBadge"
+                        android:layout_width="174dp"
+                        android:layout_height="26dp"
+                        android:text="Exercise Savvy"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/IVExercise"
+                        android:layout_width="353dp"
+                        android:layout_height="97dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="1dp"
+                        android:alpha="0.75"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@android:drawable/screen_background_light" />
+
+                    <ImageView
+                        android:id="@+id/ExerciseLock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/IVExercise"
+                        app:layout_constraintEnd_toEndOf="@+id/IVExercise"
+                        app:layout_constraintStart_toStartOf="@+id/IVExercise"
+                        app:layout_constraintTop_toTopOf="@+id/IVExercise"
+                        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CVLove"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ConstraintLove"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/IVLuv"
+                        android:layout_width="49dp"
+                        android:layout_height="48dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/IVLove"
+                        app:layout_constraintEnd_toEndOf="@+id/IVLove"
+                        app:layout_constraintHorizontal_bias="0.065"
+                        app:layout_constraintStart_toStartOf="@+id/IVLove"
+                        app:layout_constraintTop_toTopOf="@+id/IVLove"
+                        app:layout_constraintVertical_bias="0.51"
+                        app:srcCompat="@drawable/badge3" />
+
+                    <TextView
+                        android:id="@+id/LoveBadge"
+                        android:layout_width="174dp"
+                        android:layout_height="26dp"
+                        android:text="I Luv Me Badge"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/IVLove"
+                        android:layout_width="353dp"
+                        android:layout_height="97dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="1dp"
+                        android:alpha="0.75"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@android:drawable/screen_background_light" />
+
+                    <ImageView
+                        android:id="@+id/LoveLock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/IVLove"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="171dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="172dp"
+            android:layout_marginBottom="23dp"
+            android:text="Badge"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
