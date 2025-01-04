@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- Transparent blue (20% opacity for 004369) -->
+        <item android:state_pressed="true" android:drawable="@color/transparent_blue"/>
+
+        <!-- Default white background -->
+        <item android:drawable="@color/white"/>
+</selector>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FitnessApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_key">AIzaSyAas7vz5kRHpNAiaB6HPC5LOqKSZkcPjLg</string>
+    <string name="select">Select Body Parts</string>
+</resources>
