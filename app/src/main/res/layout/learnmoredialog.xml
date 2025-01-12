@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DASS-21"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="21-item self-report measure designed to assess the severity of general psychological distress and symptoms related to depression, anxiety, and stress in adults older adolescents (17 years +)."
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text=" - Depression subscale: assesses symptoms such as\n    dysphoria, hopelessness, devaluation of life, self-deprecation, \n    lack of interest/involvement, anhedonia, and inertia.
+\n - Anxiety subscale: evaluates symptoms such as autonomic \n.  arousal, skeletal muscle effects, situational anxiety, and \n.  subjective experience of anxious affect.
+\n - Stress subscale: measures symptoms related to difficulty \n.  relaxing, nervous arousal, and being easily upset/agitated, \n.  irritable/over-reactive, and impatience.
+"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PHQ-9"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Designed to measure the frequency of depressive symptoms over the past two weeks. Each question relates to a key symptom of depression, such as mood, sleep, energy levels, and interest in activities."
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Used to screen for depression and assess its severity. It helps clinicians and healthcare providers identify individuals who may be suffering from depression and track the changes in symptoms over time."
+            android:textSize="15sp"
+            android:layout_marginTop="7dp"/>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back">
+
+    <!-- Main content of the Home Fragment -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- ImageView, Title, and other UI components as before -->
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="225dp"
+            android:src="@drawable/img_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:text="HOME"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Other buttons (Routine, Diet, etc.) as before -->
+        <TextView
+            android:id="@+id/btnroutine"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/whitebutton"
+            android:text="ROUTINE"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:paddingStart="25dp"
+            android:drawableEnd="@drawable/baseline_arrow_right_alt_24"
+            android:paddingEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/btndiet"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/whitebutton"
+            android:text="DIET"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnroutine"
+            android:gravity="start|center_vertical"
+            android:paddingStart="25dp"
+            android:drawableEnd="@drawable/baseline_arrow_right_alt_24"
+            android:paddingEnd="20dp"/>
+
+        <!-- MENTAL HEALTH button -->
+        <TextView
+            android:id="@+id/btnmental"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/whitebutton"
+            android:text="MENTAL HEALTH"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btndiet"
+            android:gravity="start|center_vertical"
+            android:paddingStart="25dp"
+            android:drawableEnd="@drawable/baseline_arrow_right_alt_24"
+            android:paddingEnd="20dp"/>
+
+        <TextView
+            android:id="@+id/btnphysical"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/whitebutton"
+            android:text="PHYSICAL HEALTH"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnmental"
+            android:gravity="start|center_vertical"
+            android:paddingStart="25dp"
+            android:drawableEnd="@drawable/baseline_arrow_right_alt_24"
+            android:paddingEnd="20dp"/>
+
+        <!-- Dimming Overlay: Initially hidden -->
+        <View
+            android:id="@+id/dim_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#C4000000"
+            android:visibility="gone"/>
+
+        <!-- Dialog Content: Options shown over the main screen -->
+        <LinearLayout
+            android:id="@+id/dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Option: Appointment -->
+            <TextView
+                android:id="@+id/btnAppointment"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:background="@drawable/whitebutton"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Appointment"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Option: Test -->
+            <TextView
+                android:id="@+id/btnTest"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/whitebutton"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Mental Health Test"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Option: FAQs -->
+            <TextView
+                android:id="@+id/btnFaqs"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/whitebutton"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="FAQs"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Close button to dismiss dialog -->
+            <ImageButton
+                android:id="@+id/BtnClose"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:contentDescription="close"
+                android:background="@drawable/circle_background"
+                app:srcCompat="@drawable/baseline_close_24" />
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
